@@ -1,5 +1,5 @@
 import socket
-import datetime
+import time
 from flask import Flask
 
 application = Flask(__name__)
@@ -7,7 +7,7 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
     
-    return datetime.date.today()+" "+socket.gethostname()+"\n"
+    return socket.gethostname(),time.strftime("%X")+"\n"
 
 
 if __name__ == "__main__":
