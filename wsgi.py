@@ -1,4 +1,5 @@
 import socket
+import datetime
 from flask import Flask
 
 application = Flask(__name__)
@@ -6,7 +7,7 @@ application = Flask(__name__)
 @application.route("/")
 def hello():
     
-    return "Hello World!!? Greetings from "+socket.gethostname()+"\n"
+    return datetime.date.today()+" "+socket.gethostname()+"\n"
 
 
 if __name__ == "__main__":
