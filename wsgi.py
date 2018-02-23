@@ -9,7 +9,7 @@ def hello():
 
 @application.route("/log")
 def host():
-    print "Test"
+    return socket.gethostname()+"\n"
 
 host()
     
