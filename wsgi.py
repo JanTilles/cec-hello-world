@@ -10,8 +10,8 @@ def hello():
 
 @application.route("/log")
 def log():
-    ts = datetime.datetime.now()
-    return ts+"\n"
+    ts = datetime.time()
+    return ts
 
 
 if __name__ == "__main__":
