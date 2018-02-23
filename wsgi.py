@@ -12,7 +12,7 @@ def hello():
 def host():
     hostname = socket.gethostname()
     timestamp = datetime.date()
-    return hostname, timestamp+"\n"
+    return hostname, timestamp
 
 if __name__ == "__main__":
     application.run()
