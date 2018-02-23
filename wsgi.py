@@ -9,7 +9,9 @@ def hello():
 
 @application.route("/log")
 def host():
-    return socket.gethostname()+"\n"
+    print "Test"
 
+host()
+    
 if __name__ == "__main__":
     application.run()
