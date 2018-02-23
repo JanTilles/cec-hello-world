@@ -6,14 +6,12 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    
 	return socket.gethostname()+"\n"
 
 @application.route("/log/")
 def log():
-    host = socket.gethostname()
+	host = socket.gethostname()
 	timestamp = datetime.datetime.now()
-	
 	return host, timestamp"\n"
 
 if __name__ == "__main__":
