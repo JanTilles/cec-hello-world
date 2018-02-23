@@ -10,7 +10,7 @@ def hello():
 
 @application.route("/log")
 def log():
-    return time.time()+"\n"
+    return socket.gethostname()+"\n"
 
 
 if __name__ == "__main__":
