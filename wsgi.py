@@ -9,7 +9,7 @@ def hello():
     
 	return socket.gethostname()+"\n"
 
-@application.route("/log")
+@application.route("/log/")
 def log():
     host = socket.gethostname()
 	timestamp = datetime.datetime.now()
