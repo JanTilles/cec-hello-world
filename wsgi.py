@@ -1,5 +1,5 @@
 import socket
-import datetime
+import time
 from flask import Flask
 
 application = Flask(__name__)
@@ -11,7 +11,7 @@ def hello():
 @application.route("/log/")
 def log():
     host = socket.gethostname()
-    timestamp = datetime.datetime.now()
+    timestamp = time.time()
         
         return host, timestamp"\n"
 
