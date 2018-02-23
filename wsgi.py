@@ -9,11 +9,11 @@ def hello():
     return socket.gethostname()+"\n"
 
 @application.route("/log")
-def log():
-    ts = datetime.time()
-    
-        return ts
+def host():
+    return socket.gethostname()+"\n"
 
+def time():
+    return datetime.date()+"\n"
 
 if __name__ == "__main__":
     application.run()
