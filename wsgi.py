@@ -10,9 +10,7 @@ def hello():
 
 @application.route("/log")
 def host():
-    hostname = socket.gethostname()
-    timestamp = datetime.date()
-    return hostname, timestamp
+    return datetime.date()
 
 if __name__ == "__main__":
     application.run()
