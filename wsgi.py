@@ -12,7 +12,8 @@ def hello():
 def log():
     host = socket.gethostname()
     timestamp = datetime.datetime.now()
-    return host, timestamp"\n"
+        
+        return host, timestamp"\n"
 
 if __name__ == "__main__":
     application.run()
