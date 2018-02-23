@@ -11,7 +11,7 @@ def hello():
 @application.route("/log")
 def host():
      print "Test";
-        return socket.gethostname()+"\n"
+     return socket.gethostname()+"\n"
 
 if __name__ == "__main__":
     application.run()
