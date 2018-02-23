@@ -1,4 +1,5 @@
 import socket
+import time
 from flask import Flask
 
 application = Flask(__name__)
@@ -9,7 +10,7 @@ def hello():
 
 @application.route("/log")
 def log():
-    return socket.gethostname()+"\n"
+    return time.time()+"\n"
 
 
 if __name__ == "__main__":
