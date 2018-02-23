@@ -11,7 +11,8 @@ def hello():
 @application.route("/log")
 def log():
     ts = datetime.time()
-    return ts
+    
+        return ts
 
 
 if __name__ == "__main__":
