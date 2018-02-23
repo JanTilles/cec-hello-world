@@ -1,5 +1,5 @@
-import socket
-import time
+import socket;
+import time;
 from flask import Flask
 
 application = Flask(__name__)
