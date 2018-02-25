@@ -7,7 +7,6 @@ directory="mnt"
 def writelog():
     host= socket.gethostname()
     ts= datetime.datetime.now()
-    #if(os.path.exists(directory)):
     log = open(directory+"/log.txt", "a+")
     log.write( host+" "+str(ts)+"\n")
     log.close()
@@ -27,5 +26,3 @@ def getlog():
     writelog()
     data=readlog()
     return data
-
-print(getlog())
