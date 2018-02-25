@@ -3,6 +3,8 @@ import datetime
 import os.path
 from flask import Flask
 
+application = Flask(__name__)
+
 directory="mnt"
 
 def writelog():
@@ -25,7 +27,7 @@ def getlog():
     data=readlog()
     return data
 
-application = Flask(__name__)
+#application = Flask(__name__)
 
 @application.route("/")
 def hello():
