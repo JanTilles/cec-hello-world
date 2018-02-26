@@ -11,19 +11,20 @@ def hello():
 def host():
     import datetime
     import os.path
-    directory="mnt"
+    #directory="mnt"
 
     def writelog():
         host= socket.gethostname()
         ts= datetime.datetime.now()
-        #if(os.path.exists(directory)):
         log = open(directory+"/log.txt", "a+")
+        #log = open(directory+"/log.txt", "a+")
         log.write( host+" "+str(ts)+"\n")
         log.close()
         return
 
     def readlog():
         log = open(directory+"/log.txt", "r")
+        #log = open(directory+"/log.txt", "r")
         content =log.read()
         log.close()
         return content
