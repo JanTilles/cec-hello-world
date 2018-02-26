@@ -1,4 +1,6 @@
 import socket
+import datetime
+import os.path
 from flask import Flask
 
 application = Flask(__name__)
@@ -9,8 +11,6 @@ def hello():
 
 @application.route("/log")
 def host():
-    import datetime
-    import os.path
     #directory="mnt"
 
     def writelog():
@@ -18,7 +18,7 @@ def host():
         ts= datetime.datetime.now()
         log = open("log.txt", "a+")
         #log = open(directory+"/log.txt", "a+")
-        log.write( host+" "+str(ts)+"\n")
+        log.write("Hostname:"+host+" Timestamp:"+str(ts)+"\n")
         log.close()
         return
 
