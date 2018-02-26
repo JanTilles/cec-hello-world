@@ -16,14 +16,14 @@ def host():
     def writelog():
         host= socket.gethostname()
         ts= datetime.datetime.now()
-        log = open(directory+"/log.txt", "a+")
+        log = open("log.txt", "a+")
         #log = open(directory+"/log.txt", "a+")
         log.write( host+" "+str(ts)+"\n")
         log.close()
         return
 
     def readlog():
-        log = open(directory+"/log.txt", "r")
+        log = open("log.txt", "r")
         #log = open(directory+"/log.txt", "r")
         content =log.read()
         log.close()
