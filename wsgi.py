@@ -1,4 +1,4 @@
-import socket
+/import socket
 import datetime
 import os.path
 from flask import Flask
@@ -11,20 +11,20 @@ def hello():
 
 @application.route("/log")
 def host():
-    #directory="mnt"
+    directory="/mnt/"
 
     def writelog():
         host= socket.gethostname()
         ts= datetime.datetime.now()
-        log = open("log.txt", "a+")
-        #log = open(directory+"/log.txt", "a+")
+        #log = open("log.txt", "a+")
+        log = open(directory+"log.txt", "a+")
         log.write("Hostname:"+host+" Timestamp:"+str(ts)+"\n")
         log.close()
         return
 
     def readlog():
-        log = open("log.txt", "r")
-        #log = open(directory+"/log.txt", "r")
+        #log = open("log.txt", "r")
+        log = open(directory+"log.txt", "r")
         content =log.read()
         log.close()
         return content
