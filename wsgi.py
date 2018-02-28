@@ -18,7 +18,7 @@ def host():
         ts= datetime.datetime.now()       
         log = open(os.path.join(directory,"log.txt"), "a+")
         #log = open("log.txt", "a+")
-        log.write("Hostname:"+host+" Timestamp:"+str(ts)+"<br>")
+        log.write("<b>Hostname:</b>"+host+" <b>Timestamp:</b>"+str(ts)+"<br>")
         log.close()
         return
 
